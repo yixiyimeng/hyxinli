@@ -585,42 +585,69 @@ select::-ms-expand {
 .grid .submenu {
 	float: left;
 	width: 220px;
-	height: 618px;background: #fff;
+	height: 618px;
+	background: #fff;
 }
-.grid .submenu .title{
+
+.grid .submenu .title {
 	color: #fff;
 	font-size: 22px;
 	font-weight: bold;
 	background: #1e728a;
 	text-align: center;
 	line-height: 100px;
-}.grid .submenu li a{
+}
+
+.grid .submenu li a {
 	display: block;
 	line-height: 50px;
 	text-align: center;
 	color: #000;
 	font-size: 18px;
-}.grid .submenu li a.active{
+}
+
+.grid .submenu li a.active {
 	color: #fff;
 	background: #2293b3;
 }
-.grid .submenu li{
+
+.grid .submenu li {
 	margin-top: 10px;
-	}
+}
+
 .grid .main {
 	width: 950px;
-	float: right;background: #fff;
-	padding: 50px 30px;
-	
+	float: right;
+	background: #fff;
+	padding: 50px 30px;min-height: 618px;
+	position: relative;
+
 }
-.grid .main .title{
+.grid .main .pagelist{
+	position: absolute;
+	bottom: 50px;
+	text-align: center;color: #333;
+	left: 0;
+	right: 0;
+}.grid .main .pagelist a{
+	color: #333;
+}
+.grid .main .pagelist input{
+	width: 36px;
+	height: 21px;
+	border: 1px solid #e0e0e0;
+	text-align: center;
+}
+.grid .main .title {
 	color: #349cba;
 	font-size: 24px;
 	position: relative;
 	border-bottom: 1px solid #ddd;
 	padding-bottom: 20px;
 	padding-left: 15px;
-}.grid .main .title:before{
+}
+
+.grid .main .title:before {
 	position: absolute;
 	width: 5px;
 	height: 24px;
@@ -630,9 +657,12 @@ select::-ms-expand {
 	display: block;
 	background: #349cba;
 }
-.grid .main .modbox{
+
+.grid .main .modbox {
 	padding: 40px 15px;
-}.grid .main .userinfo .imgbox{
+}
+
+.grid .main .userinfo .imgbox {
 	height: 116px;
 	width: 116px;
 	border: 1px solid #ededed;
@@ -640,13 +670,166 @@ select::-ms-expand {
 	padding: 10px;
 	overflow: hidden;
 }
-.grid .main .userinfo .imgbox img{
+
+.grid .main .userinfo .imgbox img {
 	width: 100%;
-}.grid .main .userinfo .imgbox +div{
+}
+
+.grid .main .userinfo .imgbox+div {
 	color: #333;
 	font-size: 16px;
 	margin-left: 15px;
-}.grid .main .userinfo .imgbox +div a{
+}
+
+.grid .main .userinfo .imgbox+div a {
 	color: #999;
 	font-size: 14px;
+}
+
+.grid .main .userinfo>p {
+	color: #333;
+}
+
+.grid .main .userinfo>p span {
+	color: #666;
+	position: relative;
+}
+
+.grid .main .userinfo>p+p {
+	margin-top: 15px;
+}
+
+.grid .main .userinfo>p span .show {
+	background: rgba(0, 0, 0, .3) url(../img/icon4.png) no-repeat center center;
+	height: 18px;
+	width: 18px;
+	position: absolute;
+	right: 0;
+	bottom: 3px;
+}
+
+.grid .main .userinfo>p label {
+	vertical-align: top;
+}
+
+.grid .main .userinfo .edit {
+	color: #999;
+}
+
+.grid .main .userinfo a {
+	display: block;
+}
+
+.grid .main .userinfo img,
+.grid .main .imgbox2 {
+	display: inline-block;
+}
+
+.edit-input-group .edit-input-row {
+	width: 330px;
+	margin-left: auto;
+	margin-right: auto;
+}
+
+.edit-input-group .edit-input-row label {
+	width: 4em;
+	margin-right: 8px;
+	text-align: right;
+	color: #333;
+}
+
+.edit-input-group .edit-input-row input {
+	height: 36px;
+	border: 1px solid #ddd;
+	padding-left: 10px;
+}
+
+.edit-input-group .edit-input-row .gotoback,
+.edit-input-group .edit-input-row .saveBtn {
+	color: #fff;
+	text-align: center;
+	display: block;
+	border-radius: 5px;
+	line-height: 38px;
+}
+
+.edit-input-group .edit-input-row .gotoback {
+	background: #cdcdcd;
+	width: 90px;
+}
+
+.edit-input-group .edit-input-row .saveBtn {
+	background: #d81111;
+	border: none;
+}
+
+.editpwd .edit-input-group .edit-input-row {
+	width: 350px;
+}
+
+.editpwd .edit-input-group .edit-input-row label {
+	width: 6em;
+}
+
+.editpwd .edit-input-group .edit-input-row .saveBtn {
+	border-radius: 0;
+}
+
+.modbox .table {
+	width: 100%;
+	border-collapse: collapse;
+	color: #333;
+}
+
+.modbox .table tr th {
+	height: 50px;
+	background: #eee;
+
+	font-weight: normal;
+}
+
+.modbox .table tr td {
+	height: 50px;
+	border-bottom: 1px solid #ddd;
+	text-align: center;
+}
+.modbox .table tr td .showdetails{
+	color: #333;
+}.modbox .table tr td .showdetails:hover{
+	color: #e14545;
+}
+.modbox .table tr td .dowmload{
+	height: 20px;
+	width: 20px;
+	display: block;
+	background: url(../img/icon5.png) no-repeat center center;
+	margin: 0 auto;
+}.modbox .table tr td .dowmload:hover{
+	background-image:url(../img/icon6.png) ;
+}
+.detailswin{
+	position: fixed;
+	top: 0;
+	left: 0;
+	right: 0;
+	bottom: 0;
+	background: rgba(0,0,0,.6);
+	display: none;
+}
+.detailswin>div{
+	position: absolute;
+	top: 50%;
+	left: 50%;
+	transform: translate(-50%,-50%);
+	-webkit-transform: translate(-50%,-50%);
+	background: #fff;
+	padding: 0;
+}.detailswin>div img{
+	display: block;
+	
+}
+.detailswin>div .close{
+	position: absolute;
+	right: -40px;
+	top: -40px;
 }

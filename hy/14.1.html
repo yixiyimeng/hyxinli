@@ -21,30 +21,43 @@
 			<div class="submenu">
 				<div class="title">心理咨询协会</div>
 				<ul class="">
-					<li><a href="" class="active">基本资料</a></li>
+					<li><a href="">基本资料</a></li>
 					<li><a href="">在线缴费</a></li>
 					<li><a href="">证书查看</a></li>
 					<li><a href="">修改密码</a></li>
-					<li><a href="">缴费历史</a></li>
+					<li><a href="" class="active">缴费历史</a></li>
 				</ul>
 			</div>
 			<div class="main">
-				<div class="title">基本资料</div>
-				<div class="userinfo modbox">
-					<div class="flex flex-align-center">
-						<div class="imgbox">
-							<img src="../img/photo.png"></div>
-						<div>
-							<p>会员编号 : 2019112</p>
-							<a href="" class="mt20">修改头像 ></a>
-						</div>
+				<div class="title">缴费历史</div>
+				<div class="modbox">
+					<table class="table">
+						<tr>
+							<th>名称</th>
+							<th>金额</th>
+							<th>时间</th>
+							<th>缴费类型</th>
+							<th>状态</th>
+						</tr>
+						<tr>
+							<td>会费缴纳</td>
+							<td>150元</td>
+							<td>2019-05-20</td>
+							<td>线上支付</td>
+							<td><span class="c-green">交费成功</span></td>
+						</tr>
+						<tr>
+							<td>会费缴纳</td>
+							<td>150元</td>
+							<td>2019-05-20</td>
+							<td>线上支付</td>
+							<td class="c-red">审核中</td>
+						</tr>
+					</table>
+					<div class="pagelist">
+						<a href="">上一页</a> <a href="" class="ml20">下一页</a> <span  class="ml20">共10页</span> <span class="ml20">转到</span> <input type="text" name="" id="" value="" />
+						<span> 页</span>
 					</div>
-					<p class="mt30">姓名 : <span>陈晶</span></p>
-					<p>会员时间 : <span>2019-5-20</span></p>
-					<p>会员类别 : <span>个人会员</span></p>
-					<p>会员职务 : <span>副会长</span></p>
-					<p><label>电子会员证 : </label><span class="imgbox2"><img src="../img/img4.jpg"><i class="show"></i></span></p>
-					<a href="" class="edit mt30">编辑我的个人资料 ></a>
 				</div>
 			</div>
 		</div>
@@ -55,14 +68,3 @@
 		</div>
 	</body>
 </html>
-<script src="../js/jquery.min.js" type="text/javascript" charset="utf-8"></script>
-<script type="text/javascript">
-	$(function() {
-		$('.forgetpwdBtn').click(function() {
-			$('.forgetpwd').show()
-		});
-		$('.forgetpwd .close').click(function() {
-			$('.forgetpwd').hide()
-		});
-	})
-</script>
