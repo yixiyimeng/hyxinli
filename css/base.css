@@ -288,7 +288,20 @@ select::-ms-expand {
 	height: 120px;
 	background: #fff;
 }
-
+.header ul{
+	margin-left: 200px;
+}
+.header ul,.header ul li{
+	float: left;
+}.header ul li+li{
+	margin-left: 75px;
+}
+.header ul li a{
+	color: #333;
+	font-size: 16px;
+	line-height: 120px;
+	display: block;
+}
 .header .logo {
 	padding-top: 30px;
 	float: left;
@@ -311,7 +324,46 @@ select::-ms-expand {
 	font-size: 12px;
 	padding: 30px 0;
 }
-
+.bluefooter{
+	background: #0790b7;
+	color: #d8eef4;
+	font-size: 12px;
+	padding-top: 60px;
+	padding-bottom: 20px;
+}
+.bluefooter .linklist dt{
+	font-size: 16px;
+	color: #fff;
+	margin-bottom: 30px;
+}
+.bluefooter .linklist dd+dd{
+	margin-top: 10px;
+}
+.bluefooter .linklist a{
+	color: #d8eef4;
+}
+.bluefooter .linklist a:hover{
+	color: #fff;
+}
+.bluefooter .linklist dl{
+	border-right: 1px solid rgba(255,255,255,.3);
+	width: 16.66%;
+	padding-left: 30px;
+	padding-right: 30px;
+	float: left;
+	height: 230px;
+}
+.bluefooter .copyright{
+	text-align: center;
+	border-top: 1px solid rgba(255,255,255,.3);
+	padding-top: 25px;
+}
+.bluefooter .imgbox{
+	width: 415px;
+}.bluefooter .imgbox img{
+	display: block;
+	margin: 0 auto;
+}
 .tablink {
 	border-bottom: 1px solid #d4d7dc;
 	text-align: center;
@@ -386,6 +438,23 @@ select::-ms-expand {
 .input-group .input-row .inputbox i.icon2 {
 	background-image: url(../img/icon2.png);
 }
+
+.input-group .input-row .inputbox i.icon3 {
+	background-image: url(../img/icon9.png);
+}
+
+.input-group .input-row .inputbox i.icon4 {
+	background-image: url(../img/icon10.png);
+}
+
+.input-group .input-row .inputbox i.icon5 {
+	background-image: url(../img/icon11.png);
+}
+
+.input-group .input-row .inputbox i.icon6 {
+	background-image: url(../img/icon12.png);
+}
+
 
 .input-group .input-row input[type=text] {
 	background: none;
@@ -619,25 +688,32 @@ select::-ms-expand {
 	width: 950px;
 	float: right;
 	background: #fff;
-	padding: 50px 30px;min-height: 618px;
+	padding: 50px 30px;
+	min-height: 618px;
 	position: relative;
 
 }
-.grid .main .pagelist{
+
+.grid .main .pagelist {
 	position: absolute;
 	bottom: 50px;
-	text-align: center;color: #333;
+	text-align: center;
+	color: #333;
 	left: 0;
 	right: 0;
-}.grid .main .pagelist a{
+}
+
+.grid .main .pagelist a {
 	color: #333;
 }
-.grid .main .pagelist input{
+
+.grid .main .pagelist input {
 	width: 36px;
 	height: 21px;
 	border: 1px solid #e0e0e0;
 	text-align: center;
 }
+
 .grid .main .title {
 	color: #349cba;
 	font-size: 24px;
@@ -659,6 +735,11 @@ select::-ms-expand {
 }
 
 .grid .main .modbox {
+	padding: 25px 15px;
+	color: #333;
+}
+
+.grid .main .modbox.userinfo {
 	padding: 40px 15px;
 }
 
@@ -669,6 +750,12 @@ select::-ms-expand {
 	border-radius: 100%;
 	padding: 10px;
 	overflow: hidden;
+}
+
+.grid .main .userinfo.ConsultantUserinfo .imgbox {
+	height: 106px;
+	width: 106px;
+	border: none;
 }
 
 .grid .main .userinfo .imgbox img {
@@ -731,17 +818,38 @@ select::-ms-expand {
 	margin-right: auto;
 }
 
+.Consultant .edit-input-group .edit-input-row {
+	width: 520px;
+}
+
 .edit-input-group .edit-input-row label {
 	width: 4em;
 	margin-right: 8px;
 	text-align: right;
 	color: #333;
+	line-height: 36px;
 }
 
-.edit-input-group .edit-input-row input {
+.Consultant .edit-input-group .edit-input-row label {
+	width: 6em;
+}
+
+.edit-input-group .edit-input-row input[type=text],
+.edit-input-group .edit-input-row input[type=password] {
 	height: 36px;
 	border: 1px solid #ddd;
 	padding-left: 10px;
+	width: 260px;
+}
+
+.edit-input-group .edit-input-row textarea {
+	border: 1px solid #ddd;
+	width: 420px;
+	height: 90px;
+	resize: none;
+	padding: 0 10px;
+	box-sizing: border-box;
+	overflow-x: hidden
 }
 
 .edit-input-group .edit-input-row .gotoback,
@@ -763,6 +871,10 @@ select::-ms-expand {
 	border: none;
 }
 
+.Consultant .edit-input-group .edit-input-row .saveBtn {
+	width: 160px;
+}
+
 .editpwd .edit-input-group .edit-input-row {
 	width: 350px;
 }
@@ -773,6 +885,20 @@ select::-ms-expand {
 
 .editpwd .edit-input-group .edit-input-row .saveBtn {
 	border-radius: 0;
+}
+
+/* 上传职业照 */
+.edit-input-group .edit-input-row .edituploadImg {
+	position: relative;
+	overflow: hidden;
+}
+
+.edit-input-group .edit-input-row .edituploadImg input[type=file] {
+	position: absolute;
+	right: 0;
+	top: 0;
+	font-size: 400px;
+	opacity: 0;
 }
 
 .modbox .table {
@@ -793,43 +919,272 @@ select::-ms-expand {
 	border-bottom: 1px solid #ddd;
 	text-align: center;
 }
-.modbox .table tr td .showdetails{
+
+.modbox .table tr td .showdetails {
 	color: #333;
-}.modbox .table tr td .showdetails:hover{
+}
+
+.modbox .table tr td .showdetails:hover {
 	color: #e14545;
 }
-.modbox .table tr td .dowmload{
+
+.modbox .table tr td .dowmload {
 	height: 20px;
 	width: 20px;
 	display: block;
 	background: url(../img/icon5.png) no-repeat center center;
 	margin: 0 auto;
-}.modbox .table tr td .dowmload:hover{
-	background-image:url(../img/icon6.png) ;
 }
-.detailswin{
+
+.modbox .table tr td .dowmload:hover {
+	background-image: url(../img/icon6.png);
+}
+.modbox .table tr.details
+{
+	display: none;
+}
+.modbox .table tr.details td{
+	border-bottom: none;
+	text-align: left;
+	line-height: 26px;padding: 10px 30px;
+}
+.detailswin {
 	position: fixed;
 	top: 0;
 	left: 0;
 	right: 0;
 	bottom: 0;
-	background: rgba(0,0,0,.6);
+	background: rgba(0, 0, 0, .6);
 	display: none;
 }
-.detailswin>div{
+
+.detailswin>div {
 	position: absolute;
 	top: 50%;
 	left: 50%;
-	transform: translate(-50%,-50%);
-	-webkit-transform: translate(-50%,-50%);
+	transform: translate(-50%, -50%);
+	-webkit-transform: translate(-50%, -50%);
 	background: #fff;
 	padding: 0;
-}.detailswin>div img{
-	display: block;
-	
 }
-.detailswin>div .close{
+
+.detailswin>div img {
+	display: block;
+
+}
+
+.detailswin>div .close {
 	position: absolute;
 	right: -40px;
 	top: -40px;
+}
+
+.paywaytab .payway-link {
+	line-height: 24px;
+	display: inline-block;
+	width: 80px;
+	border-radius: 50px;
+	color: #fff;
+	background: #bfbfbf;
+	text-align: center;
+}
+
+.paywaytab .payway-link:hover,
+.paywaytab .payway-link.active {
+	background: #d91111;
+}
+
+.paywaytab .payway-link:last-child:hover,
+.paywaytab .payway-link:last-child.active {
+	background: #24a2c6;
+}
+
+.paywaytab .paywaytab-panel {
+	border: 1px solid #ececec;
+	height: 350px;
+	text-align: center;
+}
+
+.paywaytab .paywaytab-panel>div {
+	margin: 0 auto;
+}
+
+.paywaytab .paywaytab-panel .onlinepay {
+	padding-top: 50px;
+	padding-left: 225px;
+}
+
+.paywaytab .paywaytab-panel .onlinepay>div {
+	float: left;
+	text-align: center;
+}
+
+.paywaytab .paywaytab-panel .onlinepay .qr {
+	border: 2px solid #e6e6e6;
+	padding: 10px;
+	border-radius: 10px;
+}
+
+.paywaytab .paywaytab-panel .onlinepay .qr+div span,
+.paywaytab .paywaytab-panel .onlinepay .qr+div img {
+	display: inline-block;
+	vertical-align: middle;
+	font-size: 18px;
+}
+
+.paywaytab .paywaytab-panel .onlinepay p {
+	margin-left: 80px;
+
+	padding-top: 70px;
+	float: left;
+}
+
+.paywaytab .paywaytab-panel p.paymoney {
+	font-size: 16px;
+}
+
+.paywaytab .paywaytab-panel p.paymoney i {
+	font-style: normal;
+	font-size: 28px
+}
+
+.paywaytab .paywaytab-panel .offlinepay {
+	padding: 50px 20px 0;
+	text-align: center;
+
+}
+
+.paywaytab .paywaytab-panel .offlinepay .account {
+	border-bottom: 1px dashed #e1e1e1;
+	padding-bottom: 40px;
+}
+
+.paywaytab .paywaytab-panel .offlinepay .upload {
+	position: relative;
+	background: #d91111;
+	color: #fff;
+	width: 100px;
+	line-height: 32px;
+	border-radius: 5px;
+	display: inline-block;
+	overflow: hidden;
+	vertical-align: middle;
+}
+
+.paywaytab .paywaytab-panel .offlinepay .upload input[type=file] {
+	position: absolute;
+	right: 0;
+	top: 0;
+	font-size: 400px;
+	opacity: 0;
+}
+
+.paywaytab .paywaytab-panel .offlinepay .sendBtn {
+	border: none;
+	line-height: 32px;
+	width: 100px;
+	border-radius: 5px;
+	vertical-align: middle;
+	background: #bfbfbf;
+	color: #fff;
+}
+
+/*开关的大小*/
+.switch-container {
+	height: 30px;
+	width: 53px;
+}
+
+/*设置checkbox不显示*/
+.switch {
+	display: none;
+}
+
+/*设置label标签为椭圆状*/
+.switch-container span {
+	display: block;
+	background-color: #e0e0e0;
+	height: 100%;
+	width: 100%;
+	cursor: pointer;
+	border-radius: 25px;
+}
+
+/*在label标签内容之前添加如下样式，形成一个未选中状态*/
+.switch-container span:before {
+	content: '';
+	display: block;
+	border-radius: 25px;
+	height: 100%;
+	width: 30px;
+	background-color: white;
+	opacity: 1;
+	box-shadow: 1px 1px 1px 1px rgba(0, 0, 0, 0.08);
+	-webkit-transition: all 0.2s ease;
+}
+
+/*在label标签内容之后添加如下样式，形成一个选中状态*/
+.switch-container span:after {
+	position: relative;
+	top: -30px;
+	left: 23px;
+	content: '';
+	display: block;
+	border-radius: 25px;
+	height: 100%;
+	width: 30px;
+	background-color: white;
+	opacity: 0;
+	box-shadow: 1px 1px 1px 1px rgba(0, 0, 0, 0.08);
+	-webkit-transition: all 0.2s ease;
+}
+
+
+/* ~ 兄弟选择符。
+   p~ul ：位于 p 元素之后的所有 ul 元素
+*/
+
+/*选中后，选中样式显示*/
+.switch:checked~span:after {
+	opacity: 1;
+}
+
+/*选中后，未选中样式消失*/
+.switch:checked~span:before {
+	opacity: 0;
+}
+
+/*选中后label的背景色改变*/
+.switch:checked~span {
+	background-color: #4fca42;
+}
+
+/* 设置时间 */
+.settime {
+	color: #333;
+	text-align: center;
+}
+.settime .settime-item{
+	color: #666;
+	line-height: 35px;
+	margin-left: auto;
+	margin-right: auto;
+}
+.settime .settime-item .tip {
+	color: #fff;
+	background: #36bbe0;
+	border-radius: 5px;
+	line-height: 35px;
+	width: 120px;
+
+}
+
+.settime .settime-item .selectdatetime {
+	background: #f5f5f5 url(../img/icon13.png) no-repeat 95px center;
+	line-height: 35px;
+	border-radius: 8px;
+	border: none;
+	width: 120px;
+	padding-left: 7px;
+	color: #666;
 }

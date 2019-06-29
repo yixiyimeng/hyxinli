@@ -26,30 +26,56 @@
 			<div class="submenu">
 				<div class="title">心理咨询协会</div>
 				<ul class="">
-					<li><a href="" class="active">基本资料</a></li>
-					<li><a href="">在线缴费</a></li>
+					<li><a href="">基本资料</a></li>
+					<li><a href="" class="active">在线缴费</a></li>
 					<li><a href="">证书查看</a></li>
 					<li><a href="">修改密码</a></li>
 					<li><a href="">缴费历史</a></li>
 				</ul>
 			</div>
 			<div class="main">
-				<div class="title">基本资料</div>
-				<div class="userinfo modbox">
-					<div class="flex flex-align-center">
-						<div class="imgbox">
-							<img src="../img/photo.png"></div>
-						<div>
-							<p>会员编号 : 2019112</p>
-							<a href="" class="mt20">修改头像 ></a>
+				<div class="title">在线缴费</div>
+				<div class="modbox paywaytab">
+					<p>会员名称：<span>陈晶（个人会员）</span><span class="ml30">2019-5-20 到期</span></p>
+					<p class="mt10">缴费方式：<a href="javascript:;" class="payway-link active">线上支付</a><a href="javascript:;" class="payway-link ml10">线下支付</a>
+					</p>
+					<!-- 线上支付 -->
+					<div class="paywaytab-panel mt30">
+						<div class="onlinepay clearfix">
+							<div>
+								<div class="qr">
+									<img src="../img/qr1.jpg">
+								</div>
+								<div><img src="../img/weixin.jpg"><span>扫码支付</span></div>
+							</div>
+							<p class="paymoney">应付金额：<i>150</i> 元</p>
+						</div>
+
+					</div>
+					<!-- 线下支付 -->
+					<div class="paywaytab-panel mt30">
+						<div class="offlinepay">
+							<div class="account">
+								<p>账户名：广州市心理咨询师协会</p>
+								<p class="mt10">银行账号：448513658663218774223</p>
+							</div>
+							<p class="paymoney mt60">应付金额：<i>150</i>元</p>
+							<div class="mt30">
+								<form action="" method="">
+									<div class="upload"><span>上传转账截图</span><input type="file"></div>
+									<input type="submit" id="" name="" value="提交" class="sendBtn ml10" />
+								</form>
+
+							</div>
 						</div>
 					</div>
-					<p class="mt30">姓名 : <span>陈晶</span></p>
-					<p>会员时间 : <span>2019-5-20</span></p>
-					<p>会员类别 : <span>个人会员</span></p>
-					<p>会员职务 : <span>副会长</span></p>
-					<p><label>电子会员证 : </label><span class="imgbox2"><img src="../img/img4.jpg"><i class="show"></i></span></p>
-					<a href="" class="edit mt30">编辑我的个人资料 ></a>
+					<!-- 支付审核 -->
+					<div class="paywaytab-panel mt30  flex flex-align-center">
+						<div >
+							<img src="../img/icon8.png" >
+							<p class="mt30 ft16">提交成功，<span class="c-red">审核中！</span></p>
+						</div>
+					</div>
 				</div>
 			</div>
 		</div>
@@ -102,4 +128,3 @@
 		</div>
 	</body>
 </html>
-
